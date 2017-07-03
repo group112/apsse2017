@@ -8,8 +8,8 @@
 #define MAX 100000
 
 static void fesetup(void);
-static double sum1(double a, double d, int n);
-static double sum2(double a, double d, int n);
+double sum1(double a, double d, int n);
+double sum2(double a, double d, int n);
 
 int main(int argc, char *argv[]) {
     double a, d, e, s1, s2, r;
@@ -57,20 +57,6 @@ int main(int argc, char *argv[]) {
     }
 
     return 0;
-}
-
-static double sum1(double a, double d, int n) {
-    double sum, cur;
-    int    i;
-
-    for(i = 1, sum = 0., cur = a; i <= n; i ++, cur += d)
-        sum += cur; 
-
-    return sum;
-}
-
-static double sum2(double a, double d, int n) {
-    return (2 * a + (n - 1) * d) * n / 2;
 }
 
 static void handler(int sig);
